@@ -9,7 +9,7 @@ import { catchError, tap } from 'rxjs/operators';
 export class OmdbApiService {
 
   private _siteURL = "http://www.omdbapi.com/";
-  private _key = '?apikey=7c550b5b&t=";"';
+  private _key = '?apikey=7c550b5b&t=';
 
   constructor(private _http: HttpClient) { }
 

@@ -8,14 +8,14 @@ import { OmdbApiService } from './services/omdb-api.service';
   providers: [OmdbApiService]
 })
 export class AppComponent {
-  title = 'movie-finder';
+
   movieData: IOMDBResponse;
   errorMessage: any;
 
   constructor(private _omdbService: OmdbApiService) {
 
   }
-  getMoviedetails(movieName: string): boolean {
+  getMovieDetails(movieName: string): boolean {
     this._omdbService.getMovieData(movieName).subscribe(
       movieData => {
         this.movieData = movieData;
